@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"> 
+		<title>popup</title>
+		<style>
+			body
+			{
+				font-family: sans;
+				padding-top: 100px;
+			}
+
+			#connectes
+			{
+				background-color: #eee;
+				width: 150px;
+				padding: .5em;
+			}
+
+			.popup-mot
+			{
+				font-weight: bold;
+				cursor: pointer;
+			}
+
+			#close {
+				cursor: pointer;
+			}
+
+			.popup
+			{
+				position: absolute;
+				display: none;
+				width: 200px;
+				background-color: white;
+				padding: .7em;
+				box-shadow: 1px 1px 3px rgba(0,0,0,.4);
+				font-size: 12px;
+			}
+			.popup h2
+			{
+				margin-top: .2em;
+			}
+
+			.popup>.fermer
+			{
+				position: absolute;
+				top: 0;
+				right: 0;
+				padding: .5em;
+				padding-top: .1em;
+			}
+
+			.popup .photo
+			{
+				width: 80px;
+				height: auto;
+				float: right;
+				margin-left: .2em;
+				margin-bottom: .2em;
+			}			
+		</style>
+	</head>
+	<body>
+	<div id="connectes">
+		<p>Connectés : </p>
+		<ul>
+			<li><span class="popup-mot" data-popup="joe" >Joe</span></li>
+			<li><span class="popup-mot" data-popup="marc">Marc</span></li>
+			<li><span class="popup-mot" data-popup="lian">Lian</span></li>
+		</ul>
+	</div>
+	<div id="popup" class="popup">
+		<span id="close" class="fermer">X</span>
+		<img src="joe.png" alt="joe" class="photo"/>
+		<h2>Joe</h2>
+	</div>
+  <script src="exo6.js"></script>
+	</body>
+
+</html>

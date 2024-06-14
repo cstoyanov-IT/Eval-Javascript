@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Calculette</title>
+  <style>
+    form {
+        margin: 0 auto;
+        width: 450px;
+        padding: 1em;
+        border: 1px solid #CCC;
+        border-radius: 1em;
+    }
+    
+    form div + div {
+        margin-top: 1em;
+    }  
+  
+    label {
+        display: inline-block;
+        width: 110px;
+        text-align: right;
+    }
+  
+    input, textarea {
+        font: 1em sans-serif;
+        width: 300px;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        border: 1px solid #999;
+    }
+  
+    input:focus, textarea:focus {
+        border-color: #000;
+    }
+  
+    textarea {
+        vertical-align: top;
+        height: 5em;
+        resize: vertical;
+    }
+  
+    .button {
+        padding-left: 110px;
+        margin-left: .5em;
+        clear: both;
+    }    
+
+    .erreurs {
+      color:red;
+      padding:5px;
+    }
+
+    .resultatText {
+      float: left;      
+      width: 110px;
+      text-align: right;
+    }
+
+    .resultat {
+      padding-left: 5px;
+    }
+  </style>
+  </head>
+  <body>    
+    <form action="" id="calculette">
+      <div id="erreurs" class="erreurs">
+      </div>
+      <div>
+        <label for="opa">Opérande a :</label>
+        <input type="text" id="opa" name="opa" />
+      </div>
+      <div>
+        <label for="opb">Opérande b :</label>
+        <input type="text" id="opb" name="opb" />
+      </div>
+      <div>
+          <label for="operateurs">Opérateurs :</label>
+  
+          <select id="operateurs" name="operateurs">
+          	<option value="none">Sélectionnez un opérateur</option>
+          	<option value="ad">Addition</option>
+          	<option value="so">Soustraction</option>
+          	<option value="mu">Multiplication</option>
+          	<option value="di">Division</option>
+        	</select>
+      </div>
+      <div>
+        <span class="resultatText">Résultat :</span>
+        <span id="resultat" class="resultat">
+        </span>
+      </div>
+      <div class="button">
+        <button type="submit" name="calculer">Calculer</button>
+      </div>
+    </form>
+   <script src="exo4.js"></script> 
+  </body>
+  
+</html>
